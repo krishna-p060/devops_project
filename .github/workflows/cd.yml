@@ -2,7 +2,7 @@ name: Kubernetes CD
 
 on:
   workflow_run:
-    workflows: ["Java CI"]
+    workflows: ["Java CI with Maven"]
     types: [completed]
 
 jobs:
