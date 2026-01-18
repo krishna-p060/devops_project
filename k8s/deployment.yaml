@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atm-cli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atm
+  template:
+    metadata:
+      labels:
+        app: atm
+    spec:
+      containers:
+        - name: atm
+          image: docker.io/<DOCKERHUB_USERNAME>/atm-system:latest
+          stdin: true
+          tty: true
